@@ -36,12 +36,18 @@ public class CollectionTestSuite {
 
         ArrayList<Integer> normalList = new ArrayList<Integer>();
         System.out.println("List size: " + normalList.size() );
-        for(int n=0; n < 100; n++) {
-            normalList.add(n);
+        normalList.add(1);
+        normalList.add(2);
+        normalList.add(3);
+        normalList.add(4);
+        normalList.add(5);
+        normalList.add(6);
+        normalList.add(7);
+        normalList.add(8);
 
-        }
         ArrayList<Integer> result = exterminate(normalList);
         System.out.println("List size after exterminate: " + result.size() );
-        Assert.assertEquals(50,result.size());
+        Assert.assertEquals(4,result.size());
+        Assert.assertEquals(normalList.get(1),result.get(0));
     }
 }
