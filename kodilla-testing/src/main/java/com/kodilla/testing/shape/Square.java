@@ -8,22 +8,17 @@ public class Square implements Shape {
         this.shapeName = shapeName;
         this.a = a;
     }
-
     public double getA() {
-        return 1;
+        return a;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Square square = (Square) o;
-
         if (Double.compare(square.a, a) != 0) return false;
         return shapeName.equals(square.shapeName);
     }
-
     @Override
     public int hashCode() {
         int result;
@@ -33,15 +28,16 @@ public class Square implements Shape {
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
     }
-
     @Override
     public String getShapeName() {
-        return "";
+        return "Square";
     }
-
     @Override
     public double getField() {
-
-        return 0;
+        return a * a;
+    }
+    @Override
+    public String toString() {
+        return "This is : " + shapeName;
     }
 }
