@@ -29,17 +29,19 @@ public class CollectionTestSuite {
         ArrayList<Integer> emptyList = new ArrayList<Integer>();
         exterminate(emptyList);
         System.out.println("List size: " + emptyList.size());
+        Assert.assertEquals(0,emptyList.size());
     }
     @Test
     public void testOddNumbersExterminatorNormalList(){
 
         ArrayList<Integer> normalList = new ArrayList<Integer>();
         System.out.println("List size: " + normalList.size() );
-        Random theGenerator = new Random();
-        for(int n=0; n < 200; n++) {
-            normalList.add(theGenerator.nextInt(100));
+        for(int n=0; n < 100; n++) {
+            normalList.add(n);
+
         }
-        exterminate(normalList);
-        System.out.println("List size: " + normalList.size() );
+        ArrayList<Integer> result = exterminate(normalList);
+        System.out.println("List size after exterminate: " + result.size() );
+        Assert.assertEquals(50,result.size());
     }
 }
