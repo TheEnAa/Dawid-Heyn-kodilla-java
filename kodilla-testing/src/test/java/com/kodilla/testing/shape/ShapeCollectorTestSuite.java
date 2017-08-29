@@ -23,7 +23,6 @@ public class ShapeCollectorTestSuite {
         Square square = new Square("Square",5.0);
         shapeCollector.addFigure(square);
         Assert.assertEquals(1, shapeCollector.listSize());
-
     }
     @Test
     public void testRemoveFigure() {
