@@ -8,20 +8,24 @@ public class Calculator {
     @Autowired
     private Display display;
 
-    public void add(double a, double b) {
+    public Double add(double a, double b) {
         Double sum = a + b;
         display.displayValue(sum);
+        return sum;
     }
-    public void sub(double a, double b) {
+    public Double sub(double a, double b) {
         Double difference = a - b;
         display.displayValue(difference);
+        return difference;
     }
-    public void mul(double a, double b) {
+    public Double mul(double a, double b) {
         Double product = a * b;
         display.displayValue(product);
+        return product;
     }
-    public void div (double a, double b) {
+    public Double div (double a, double b) {
         Double quotient = a / b;
         display.displayValue(quotient);
+        return quotient;
     }
 }
